@@ -1,11 +1,11 @@
-aimport unittest
+import unittest
 from lab1 import *
 
  # A few test cases.  Add more!!!
 class TestLab1(unittest.TestCase):
 
     def test_max_list_iter(self):
-        """add description here"""
+        """This code tests if the ValueError is raised when the list value is None"""
         tlist = None
         with self.assertRaises(ValueError):  # used to check for exception
             max_list_iter(tlist)
