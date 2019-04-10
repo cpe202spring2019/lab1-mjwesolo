@@ -23,6 +23,11 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(max_list_iter([4,4,4,1]), 4)
         self.assertEqual(max_list_iter([1,4,4,4]), 4)
         self.assertEqual(max_list_iter([4,4,4,4]), 4)
+        self.assertEqual(max_list_iter([4,3,2,2]), 4)
+        self.assertEqual(max_list_iter([3,2,2,4]), 4)
+        self.assertEqual(max_list_iter([2,2,3,4]), 4)
+        self.assertEqual(max_list_iter([3,3,3,4]), 4)
+        
         
         
         
@@ -54,7 +59,7 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(bin_search(-1, 0, high, list_val), None) 
         self.assertEqual(bin_search(20, 0, high, list_val), None)
         
-
+        
 
 if __name__ == "__main__":
         unittest.main()
