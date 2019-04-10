@@ -2,7 +2,7 @@
 """finds the max of a list of numbers and returns the value(not the index)
 If int_list is empty, it returns None. If list is None, raises ValueError"""
 def max_list_iter(int_list):  # must use iteration not recursion
-    maximum = -100000 #change to -2^(32)-1
+    maximum = -2**(32)-1
     if int_list == None:
         raise ValueError
     if len(int_list) == 0:
@@ -17,7 +17,7 @@ If list is None, raises ValueError"""
 def reverse_rec(int_list):   # must use recursion
     if int_list == None:
         raise ValueError
-    if len(int_list) == 1:
+    if len(int_list) <= 1:
         return int_list
     return [int_list[-1]] + reverse_rec(int_list[:-1])
     
