@@ -14,6 +14,9 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(max_list_iter([1,2,4,3]), 4)
         self.assertEqual(max_list_iter([1,4,2,3]), 4)
         self.assertEqual(max_list_iter([4,3,2,1]), 4)
+        self.assertEqual(max_list_iter([]), None)
+        self.assertEqual(max_list_iter([1]), 1)
+        
         
     def test_max_list_repeat(self):    
         """This code tests if the function works with repeated values in a list"""
@@ -41,6 +44,15 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(reverse_rec([1,2,2]), [2,2,1])
         self.assertEqual(reverse_rec([2,2,2]), [2,2,2])
         self.assertEqual(reverse_rec([2,2,1]), [1,2,2])
+        self.assertEqual(reverse_rec([1]), [1])
+        self.assertEqual(reverse_rec([]), [])
+        
+        
+    def test_reverse_rec_repeat(self):    
+        """This code tests if the function works with repeated values in a list"""
+        self.assertEqual(reverse_rec([3,3,3]), [3,3,3])
+        self.assertEqual(reverse_rec([2,3,3]), [3,3,2])
+        self.assertEqual(reverse_rec([3,3,2]), [2,3,3])
 
     def test_bin_search(self):
         """This code tests if the bin_search function raises the ValueError if a list value 
